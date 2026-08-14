@@ -10,3 +10,49 @@ h1 {
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(146, 34, 17);
+  background-color: rgb(200, 182, 161);
+  line-height: 1.6;
+}
+
+.cabeçalho {
+  background-color: rgb(200, 182, 161);
+  color: rgb(146, 34, 17);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid rgb(146, 34, 17);
+}
+
+.cabecalho h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.menu {
+  background-color: rgb(146, 34, 17);
+  color: rgb(200, 182, 161);
+  padding: 15px;
+  text-align: center;
+}
+
+.menu a {
+  color: rgb(200, 182, 161);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background-color: rgb(200, 182, 161);
+  color: rgb(146, 34, 17);
+  padding: 50px;
+  text-align: center;
+}

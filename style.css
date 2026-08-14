@@ -1,0 +1,12 @@
+seletor {
+  propriedade: valor;
+  color: rgb(146, 34, 17);
+}
+
+h1 {
+}
+*/ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

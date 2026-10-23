@@ -36,31 +36,38 @@ body {
     /* Define a fonte utilizada na aplicação. */
     font-family: Arial, sans-serif;
 
-    /* Define a cor de fundo da página. */
-    background: var(--bege);
+    /* Cor de reserva, usada enquanto a imagem carrega ou se ela falhar. */
+    background-color: var(--bege);
 
     /* Define a cor padrão dos textos. */
     color: var(--marrom-escuro);
+}
 
-    /* ...margin, font-family e color continuam iguais... */
+/*
+   Camada com a imagem de fundo, presa à tela inteira.
 
-    /* Cor usada enquanto a imagem carrega, ou se ela falhar. */
-    background-color: var(--bege);
+   Como ela é "fixed" e usa inset: 0, sempre cobre a tela toda,
+   não importa a altura do conteúdo. Isso evita a faixa bege
+   no celular e dispensa o background-attachment: fixed,
+   que não funciona direito no iPhone.
+*/
+body::before {
+    /* Necessário para o pseudo-elemento existir. */
+    content: "";
 
-    /* Imagem de fundo. */
-    background-image: url("../images/slowrush.png");
+    /* Prende a camada à tela e estica nos quatro lados. */
+    position: fixed;
+    inset: 0;
 
-    /* Faz a imagem cobrir a tela inteira, sem distorcer. */
-    background-size: cover;
+    /* Coloca a camada atrás de todo o conteúdo. */
+    z-index: -1;
 
-    /* Centraliza a imagem. */
-    background-position: center;
-
-    /* Impede que a imagem se repita. */
-    background-repeat: no-repeat;
-
-    /* Mantém a imagem parada quando a página rola. */
-    background-attachment: fixed;
+    /*
+       Cor de reserva + imagem, centralizada, cobrindo toda a área
+       e sem repetir. Para mudar qual parte da foto aparece,
+       troque o "center" (ex.: 30% center mostra mais a esquerda).
+    */
+    background: var(--bege) url("../images/slowrush.png") center / cover no-repeat;
 }
 
 /*
@@ -76,7 +83,7 @@ body {
     /* Adiciona espaço interno. */
     padding: 30px;
 
-    /* Define o fundo branco. */
+    /* Define o fundo branco, levemente transparente. */
     background: rgba(255, 255, 255, 0.834);
 
     /* Faixa colorida no topo do cartão. */
@@ -251,6 +258,15 @@ li {
 }
 
 /*
+   Permite que textos longos quebrem de linha
+   sem estourar o cartão.
+*/
+li span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/*
    Define a aparência do texto
    quando a tarefa está concluída.
 */
@@ -295,31 +311,18 @@ li.vazio {
 */
 @media (max-width: 600px) {
 
-    /*
-       Em telas pequenas,
-       campo e botão ficam um abaixo do outro.
-    */
-    .formulario {
-        /* Muda a direção do Flexbox. */
-        flex-direction: column;
-    }
-}
-
-/* Permite que textos longos quebrem de linha sem estourar o cartão. */
-li span {
-    min-width: 0;
-    overflow-wrap: anywhere;
-}
-
-@media (max-width: 600px) {
-
     /* Reduz a margem e o espaço interno do cartão. */
     .container {
         margin: 16px;
         padding: 20px;
     }
 
+    /*
+       Em telas pequenas,
+       campo e botão ficam um abaixo do outro.
+    */
     .formulario {
+        /* Muda a direção do Flexbox. */
         flex-direction: column;
     }
 
@@ -338,10 +341,5 @@ li span {
     /* Botões maiores, mais fáceis de tocar. */
     button {
         padding: 12px 16px;
-    }
-
-    /* Evita o problema da imagem fixa no iPhone. */
-    body {
-        background-attachment: scroll;
     }
 }

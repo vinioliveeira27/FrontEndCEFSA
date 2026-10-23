@@ -1,58 +1,347 @@
-seletor {
-  propriedade: valor;
-  color: rgb(146, 34, 17);
+/*
+   Paleta de cores da aplicação.
+   Declarar as cores em variáveis permite trocar
+   a paleta inteira mudando apenas estas linhas.
+*/
+:root {
+    /* Marrom escuro: textos e hover dos botões. */
+    --marrom-escuro: #3d170d;
+
+    /* Vermelho vinho: botões principais e filtro ativo. */
+    --vinho: #922211;
+
+    /* Laranja terra: destaques e foco. */
+    --laranja: #d74d2e;
+
+    /* Bege: fundo da página, bordas e botões secundários. */
+    --bege: #c8b6a1;
 }
 
-h1 {
-}
-*/ * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/*
+   O seletor * seleciona todos os elementos da página.
+   box-sizing faz com que padding e border sejam
+   considerados dentro da largura e altura dos elementos.
+*/
+* {
+    box-sizing: border-box;
 }
 
+/*
+   Define a aparência geral da página.
+*/
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(146, 34, 17);
-  background-color: rgb(200, 182, 161);
-  line-height: 1.6;
+    /* Remove a margem padrão do navegador. */
+    margin: 0;
+
+    /* Define a fonte utilizada na aplicação. */
+    font-family: Arial, sans-serif;
+
+    /* Define a cor de fundo da página. */
+    background: var(--bege);
+
+    /* Define a cor padrão dos textos. */
+    color: var(--marrom-escuro);
+
+    /* ...margin, font-family e color continuam iguais... */
+
+    /* Cor usada enquanto a imagem carrega, ou se ela falhar. */
+    background-color: var(--bege);
+
+    /* Imagem de fundo. */
+    background-image: url("../images/slowrush.png");
+
+    /* Faz a imagem cobrir a tela inteira, sem distorcer. */
+    background-size: cover;
+
+    /* Centraliza a imagem. */
+    background-position: center;
+
+    /* Impede que a imagem se repita. */
+    background-repeat: no-repeat;
+
+    /* Mantém a imagem parada quando a página rola. */
+    background-attachment: fixed;
 }
 
-.cabeçalho {
-  background-color: rgb(200, 182, 161);
-  color: rgb(146, 34, 17);
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid rgb(146, 34, 17);
+/*
+   Define o cartão principal da aplicação.
+*/
+.container {
+    /* Impede que o conteúdo fique muito largo. */
+    max-width: 700px;
+
+    /* Centraliza o container horizontalmente. */
+    margin: 50px auto;
+
+    /* Adiciona espaço interno. */
+    padding: 30px;
+
+    /* Define o fundo branco. */
+    background: rgba(255, 255, 255, 0.834);
+
+    /* Faixa colorida no topo do cartão. */
+    border-top: 6px solid var(--laranja);
+
+    /* Arredonda os cantos. */
+    border-radius: 12px;
+
+    /* Cria uma sombra suave, na cor do marrom da paleta. */
+    box-shadow: 0 4px 15px rgba(61, 23, 13, 0.18);
 }
 
-.cabecalho h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
+/*
+   Organiza o campo de texto e o botão
+   de adicionar lado a lado.
+*/
+.formulario {
+    /* Ativa o Flexbox. */
+    display: flex;
+
+    /* Cria um espaço entre os elementos. */
+    gap: 10px;
 }
 
-.menu {
-  background-color: rgb(146, 34, 17);
-  color: rgb(200, 182, 161);
-  padding: 15px;
-  text-align: center;
+/*
+   Define a aparência do campo de texto.
+*/
+input {
+    /* Faz o input ocupar o espaço disponível. */
+    flex: 1;
+
+    /* Adiciona espaço interno. */
+    padding: 12px;
+
+    /* Define o tamanho do texto. */
+    font-size: 16px;
+
+    /* Define a borda. */
+    border: 1px solid var(--bege);
+
+    /* Arredonda os cantos. */
+    border-radius: 6px;
+
+    /* Mantém a cor do texto digitado igual à do resto da página. */
+    color: var(--marrom-escuro);
 }
 
-.menu a {
-  color: rgb(200, 182, 161);
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+/*
+   Destaque do campo quando o usuário clica nele.
+*/
+input:focus {
+    /* Contorno laranja ao redor do campo. */
+    outline: 2px solid var(--laranja);
+    outline-offset: 1px;
 }
 
-.menu a:hover {
-  text-decoration: underline;
+/*
+   Define a aparência geral dos botões.
+*/
+button {
+    /* Remove a borda padrão. */
+    border: none;
+
+    /* Define o espaço interno. */
+    padding: 10px 16px;
+
+    /* Altera o cursor para indicar que é clicável. */
+    cursor: pointer;
+
+    /* Arredonda os cantos. */
+    border-radius: 6px;
+
+    /* Cor de fundo e do texto dos botões principais. */
+    background: var(--vinho);
+    color: white;
+
+    /* Suaviza a troca de cor ao passar o mouse. */
+    transition: background 0.15s;
 }
 
-.hero {
-  background-color: rgb(200, 182, 161);
-  color: rgb(146, 34, 17);
-  padding: 50px;
-  text-align: center;
+/*
+   Escurece o botão quando o mouse passa por cima.
+*/
+button:hover:not(:disabled) {
+    background: var(--marrom-escuro);
+}
+
+/*
+   Contorno visível para quem navega pelo teclado.
+*/
+button:focus-visible {
+    outline: 2px solid var(--laranja);
+    outline-offset: 2px;
+}
+
+/*
+   Botão desativado (ex.: "Limpar" sem tarefas concluídas).
+*/
+button:disabled {
+    /* Deixa o botão apagado. */
+    opacity: 0.4;
+
+    /* Mostra que não é possível clicar. */
+    cursor: not-allowed;
+}
+
+/*
+   Define a aparência dos botões de filtro.
+*/
+.filtro {
+    /* Define uma cor de fundo clara. */
+    background: var(--bege);
+
+    /* Texto escuro para dar contraste com o bege. */
+    color: var(--marrom-escuro);
+}
+
+/*
+   Define a aparência do filtro selecionado.
+*/
+.filtro.ativo {
+    /* Muda a cor do botão ativo. */
+    background: var(--vinho);
+
+    /* Muda a cor do texto. */
+    color: white;
+}
+
+/*
+   Organiza os botões de filtro.
+*/
+.controles {
+    /* Adiciona espaço acima e abaixo. */
+    margin: 20px 0;
+
+    /* Ativa o Flexbox. */
+    display: flex;
+
+    /* Cria espaço entre os botões. */
+    gap: 8px;
+}
+
+/*
+   Remove os marcadores da lista.
+*/
+ul {
+    /* Remove as bolinhas padrão. */
+    list-style: none;
+
+    /* Remove o espaçamento interno padrão. */
+    padding: 0;
+}
+
+/*
+   Define a aparência de cada tarefa.
+*/
+li {
+    /* Coloca os elementos lado a lado. */
+    display: flex;
+
+    /* Alinha verticalmente os elementos. */
+    align-items: center;
+
+    /* Coloca texto de um lado e botões do outro. */
+    justify-content: space-between;
+
+    /* Adiciona espaço interno. */
+    padding: 12px;
+
+    /* Cria uma linha separadora. */
+    border-bottom: 1px solid var(--bege);
+}
+
+/*
+   Define a aparência do texto
+   quando a tarefa está concluída.
+*/
+li.concluida span {
+    /* Risca o texto. */
+    text-decoration: line-through;
+
+    /* Deixa o texto menos destacado. */
+    opacity: 0.5;
+}
+
+/*
+   Mensagem exibida quando a lista está vazia.
+*/
+li.vazio {
+    /* Centraliza a mensagem. */
+    justify-content: center;
+
+    /* Deixa a mensagem discreta. */
+    opacity: 0.6;
+}
+
+/*
+   Organiza a área de resumo.
+*/
+.resumo {
+    /* Ativa o Flexbox. */
+    display: flex;
+
+    /* Coloca os elementos nas extremidades. */
+    justify-content: space-between;
+
+    /* Alinha verticalmente o contador e o botão. */
+    align-items: center;
+
+    /* Adiciona espaço acima. */
+    margin-top: 20px;
+}
+
+/*
+   Responsividade para telas pequenas.
+*/
+@media (max-width: 600px) {
+
+    /*
+       Em telas pequenas,
+       campo e botão ficam um abaixo do outro.
+    */
+    .formulario {
+        /* Muda a direção do Flexbox. */
+        flex-direction: column;
+    }
+}
+
+/* Permite que textos longos quebrem de linha sem estourar o cartão. */
+li span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+
+    /* Reduz a margem e o espaço interno do cartão. */
+    .container {
+        margin: 16px;
+        padding: 20px;
+    }
+
+    .formulario {
+        flex-direction: column;
+    }
+
+    /* Deixa os filtros quebrarem de linha se não couberem. */
+    .controles {
+        flex-wrap: wrap;
+    }
+
+    /* Texto em cima, botões embaixo. */
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Botões maiores, mais fáceis de tocar. */
+    button {
+        padding: 12px 16px;
+    }
+
+    /* Evita o problema da imagem fixa no iPhone. */
+    body {
+        background-attachment: scroll;
+    }
 }

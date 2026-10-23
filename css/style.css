@@ -37,7 +37,7 @@ body {
     font-family: Arial, sans-serif;
 
     /* Cor de reserva, usada enquanto a imagem carrega ou se ela falhar. */
-    background-color: var(--bege);
+    background-color: var(--lime);
 
     /* Define a cor padrão dos textos. */
     color: var(--marrom-escuro);

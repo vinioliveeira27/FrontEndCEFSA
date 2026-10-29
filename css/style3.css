@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    page: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+    background-color: crimson;
+    color: black;
+    line-height: 1.6;
+
+
+}
+
+.container {
+    width:90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+

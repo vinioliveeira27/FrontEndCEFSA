@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8f8477;
+    background-image: url("../imagens/midia.jpg");
+    background-size: cover;
+    /* preenche a tela toda, recortando o excesso */
+    background-position: center;
+    /* mantém o centro da foto visível */
+    background-repeat: no-repeat;
+    /* não repete a imagem */
+    background-attachment: fixed;
+    /* a foto fica parada quando a página rola */
+    min-height: 100vh;
+
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto 0;
+    padding: 20px;
+    background-color: rgba(255, 242, 239, 0.641); /* mesma cor, 80% opaca */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d74d2e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.filtro.ativo {
+    background-color: #d74d2e;
+    color: white;
+}
+
+.controles {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.concluida span {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.6;
+}
+
+.resumo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .formulario {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .resumo {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

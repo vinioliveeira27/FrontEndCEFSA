@@ -1,0 +1,274 @@
+/* Seletor universal - aplica a TODOS os elementos da página */
+* {
+    margin: 0;                /* remove a margem padrão do navegador */
+    padding: 0;                /* remove o espaçamento interno padrão */
+    box-sizing: border-box;    /* padding e borda contam dentro da largura/altura definida */
+}
+
+/* Estilo aplicado ao body inteiro (afeta a página toda por herança) */
+body {
+    font-family: Arial, Helvetica, sans-serif;  /* fonte principal, com alternativas de fallback */
+    background-color: #f5f7fb;  /* cor de fundo da página (cinza bem claro) */
+    color: #172033;              /* cor padrão do texto (azul bem escuro) */
+    line-height: 1.6;             /* espaçamento entre linhas, deixa o texto mais respirável */
+}
+
+/* Classe reutilizável para centralizar e limitar a largura do conteúdo */
+.container {
+    width: 90%;             /* ocupa 90% da largura da tela */
+    max-width: 1180px;       /* nunca ultrapassa 1180px, mesmo em telas grandes */
+    margin: 0 auto;          /* centraliza horizontalmente (0 em cima/baixo, auto nos lados) */
+}
+
+/* Estilo do cabeçalho do site */
+.header {
+    background-color: #101828;  /* fundo escuro (quase preto/azul marinho) */
+    color: black;                 /* cor do texto dentro do header */
+    position: sticky;             /* gruda no topo da tela ao rolar a página */
+    top: 0;                        /* gruda exatamente na borda superior */
+    z-index: 1000;                 /* garante que fique por cima de outros elementos */
+}
+
+/* Conteúdo interno do header (logo, menu, botão) */
+.header-content {
+    min-height: 75px;               /* altura mínima, pode crescer se precisar */
+    display: flex;                   /* organiza os filhos lado a lado (Flexbox) */
+    align-items: center;             /* centraliza verticalmente */
+    justify-content: space-between;  /* espaça ao máximo entre logo, menu e botão */
+    gap: 30px;                        /* espaço entre cada item filho */
+}
+
+/* Link/logo "Tech Connect" */
+.logo {
+    color: white;             /* cor do texto do logo */
+    text-decoration: none;    /* remove o sublinhado padrão de link */
+    font-size: 1.5rem;         /* tamanho da fonte (~24px) */
+    font-weight: 800;          /* negrito bem forte, dá destaque */
+}
+
+/* Parte "Connect" dentro do logo (span específico) */
+.logo span {
+    color: #4f46e5;  /* cor roxo/azul vibrante, contrasta com o "Tech" branco */
+}
+
+/* Menu de navegação */
+.menu {
+    display: flex;  /* organiza os links lado a lado */
+    gap: 30px;        /* espaço entre cada link */
+}
+
+/* Estilo de cada link dentro do menu */
+.menu a {
+    color: #d0d5dd;          /* cor cinza claro (mais discreto que branco puro) */
+    text-decoration: none;    /* remove sublinhado padrão */
+    font-size: 0.95rem;        /* tamanho levemente menor que o texto padrão */
+    transition: 0.3s;           /* suaviza a mudança de cor no hover, em 0.3 segundos */
+}
+
+/* Efeito ao passar o mouse sobre um link do menu */
+.menu a:hover {
+    color: #5eead4;  /* muda para um verde-água claro quando o mouse passa por cima */
+}
+
+/* Botão de ação (ex: "Login", "Sign Up") */
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    background-color: #14b8a6;  /* cor roxa/azul vibrante, contrasta com o "Tech" branco */
+    color: white; /* cor do texto do botão */
+    text-decoration: none; /* remove sublinhado padrão */
+    border: none; /* remove sublinhado padrão */
+    border-radius: 5px; /* cantos arredondados */
+    transition: 0.3s; /* suaviza a mudança de cor no hover, em 0.3 segundos */
+    font-weight: 600; /* deixa o texto do botão um pouco mais grosso */
+    cursor: pointer; /* suaviza a mudança de cor no hover, em 0.3 segundos */
+}
+
+.btn:hover {
+    background-color: #0f766e;  /* muda para um verde-água mais escuro quando o mouse passa por cima */
+    transform: translateY(-2px); /* levanta o botão levemente para dar efeito de "clique" */
+
+}
+
+.btn-outline {
+    background-color: transparent;  /* fundo transparente */
+    border: 1px solid #5eead4;  /* borda verde-água clara */
+    color: #5eead4;  /* cor do texto verde-água clara */
+}
+
+.btn-outline:hover {
+    background-color: #5eead4;  /* muda o fundo para verde-água clara */
+    color: #101828;  /* muda a cor do texto para preto */
+}
+.btn-light {
+    background-color: white;
+    color: #0f766e;
+}
+
+.btn-header {
+    padding: 9px 16px;  /* reduz o tamanho do botão no header */
+    font-size: 0.9rem;  /* reduz o tamanho da fonte do botão no header */
+}
+
+.hero {
+    background: linear-gradient(135deg, #101828 0%, #172554 100%);  /* gradiente de fundo do hero */
+    color: white;
+    padding: 100px 0;  /* espaçamento interno grande em cima e embaixo */
+}
+.header-content {
+    display: grid;  /* organiza os filhos em uma grade */
+    grid-template-columns: 1.4fr 0.6fr;  /* define a proporção das colunas (logo/menu e botão) */
+    align-items: center;  /* centraliza verticalmente os itens da grade */
+    gap: 60px;  /* espaço entre as colunas da grade */
+}
+
+.tag {
+    color: #14b8a6;  /* cor verde-água clara */
+    font-size: 0.8rem;  /* tamanho da fonte menor */
+    font-weight: 800;  /* deixa o texto um pouco mais grosso */
+    letter-spacing: 1.5px;  /* aumenta o espaçamento entre letras */
+    margin-bottom: 15px;  /* espaço abaixo da tag */
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 6vw, 5rem); /* tamanho da fonte responsivo: mínimo 2rem, máximo 5rem, escala com a largura da tela */
+    font-weight: 800;  /* deixa o título bem grosso */
+    margin-bottom: 20px;  /* espaço abaixo do título */
+    line-height: 1.2;  /* espaçamento entre linhas do título */
+
+}
+
+.hero h1 span {
+    color: #5eead4;  /* cor verde-água clara para destacar parte do título */
+}
+
+.hero-description {
+    max-width: 600px;  /* limita a largura do parágrafo */
+    color: #cdb5e1;
+    font-size: 1.1rem;
+    margin-bottom: 30px;  /* espaço abaixo do parágrafo */
+
+}
+
+.hero-buttons {
+    display: flex;  /* organiza os botões lado a lado */
+    gap: 15px;  /* espaço entre os botões */
+    flex-wrap: wrap;  /* permite que os botões quebrem linha em telas menores */
+}
+
+.hero-card {
+    background-color: rgba(255, 255, 255, 0.08);  /* fundo branco com transparência */
+    border: 1px solid rgba(255, 255, 255, 0.15);  /* borda branca com transparência */
+    padding: 35px; /* espaçamento interno grande */
+    border-radius: 18px;  /* cantos arredondados */
+    backdrop-filter: blur(10px);  /* efeito de desfoque no fundo (fundo borrado) */
+}
+
+.card-label {
+    color:#5eead4;
+    font-size: 0.8rem;  /* tamanho da fonte menor */
+    font-weight: bold;  /* deixa o texto um pouco mais grosso */
+    margin-bottom: 10px;  /* espaço abaixo do label */
+}
+
+.hero-card h2 {
+    font-size: 2rem;  /* tamanho da fonte do título do card */
+    font-weight: 700;  /* deixa o título do card grosso */
+    margin-bottom: 10px;  /* espaço abaixo do título do card */
+    color: #94a3b8;  /* cor cinza claro para o título do card */
+}
+
+.event-info {
+    display:grid;
+    grid-template-columns: 1fr 1fr;  /* duas colunas de largura igual */
+    gap: 15px;  /* espaço entre as colunas */
+    margin-top: 30px;  /* espaço acima do bloco de informações */
+}
+
+.event-info strong {
+    display: block;  /* força o strong a ocupar uma linha inteira */
+    font-size: 1.6rem;  /* tamanho da fonte levemente menor */
+}
+
+.event-info span {
+    color: #cdb5e1;  /* cor cinza claro para o texto do span */
+    font-size: 0.9rem;  /* tamanho da fonte menor */
+    display: block;  /* força o span a ocupar uma linha inteira */
+}
+
+.section {
+    padding: 80px 0;  /* espaçamento interno grande em cima e embaixo */
+
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+    color:#5eead4
+}
+
+.cards {
+    display: grid;  /* organiza os cards em uma grade */
+    grid-template-columns: repeat(3, 1fr);  /* três colunas de largura igual */
+    gap: 25px;  /* espaço entre os cards */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.08);  /* fundo branco com transparência */
+    border: 1px solid #e4e7ec;  /* borda cinza clara */
+    padding: 30px; /* espaçamento interno grande */
+    border-radius: 15px;  /* cantos arredondados */
+    transition: 0.3s;  /* suaviza a mudança de estilo no hover */
+}
+
+.card:hover {
+    transform: translateY(-5px);  /* levanta o card levemente para dar efeito de "clique" */
+    box-shadow: 0 15px 35px rgba(16,24,40,0.1);  /* adiciona sombra ao card para dar profundidade */
+}
+
+.icon {
+    width: 50px;  /* largura do ícone */
+    height: 50px;  /* altura do ícone */
+    display: flex;  /* organiza o conteúdo do ícone (se houver) */
+    align-items: center;  /* centraliza verticalmente o conteúdo do ícone */
+    justify-content: center;  /* centraliza horizontalmente o conteúdo do ícone */
+    background-color:#ccfbf1;  /* fundo verde-água claro */
+    color: #0f766e;  /* cor do ícone (verde-água escuro) */
+    border-radius: 10px;  /* deixa o ícone redondo */
+    font-weight: bold;  /* deixa o ícone em negrito */
+    margin-bottom: 20px;  /* espaço abaixo do ícone */
+}
+
+.card h3 {
+    font-size: 1.4rem;  /* tamanho da fonte do título do card */
+    font-weight: 700;  /* deixa o título do card grosso */
+    margin-bottom: 15px;  /* espaço abaixo do título do card */
+}
+
+.card p {
+    color: #667085;  /* cor cinza escuro para o texto do card */
+}
+
+.section-dark {
+    background-color: #101828;  /* fundo escuro (quase preto/azul marinho) */
+    color: white;  /* cor do texto branco */
+}
+
+.section-dark p {
+    color: #cbd5e1;  /* cor cinza claro para o texto do parágrafo */
+}
+
+.two-columns {
+    display: grid;  /* organiza os elementos em uma grade */
+    grid-template-columns: 1fr 1fr;  /* duas colunas de largura igual */
+    gap: 60px;  /* espaço entre as colunas */
+    align-items: center;  /* centraliza verticalmente os itens da grade */
+}
+
+.checklist {
+    list-style: none;  /* remove os marcadores padrão da lista */
+    padding: 0;  /* remove o espaçamento interno padrão da lista */
+}

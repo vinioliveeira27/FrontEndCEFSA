@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="../css/style08.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Minha lista de tarefas</h1>
+        <p class="descrição">
+            Adicione, conclua e filtre tarefas
+        </p>
+
+        <section class="formulário">
+            <input type="text" id="nova-tarefa" placeholder="Digite uma nova tarefa">
+            <button id="adicionar-tarefa">Adicionar</button>
+        </section>
+
+        <section class="controles">
+            <button class="filtro ativo" data-filtro="todos">Todas</button>
+            <button class="filtro" data-filtro="pendentes">Pendentes</button>
+            <button class="filtro" data-filtro="concluidas">Concluídas</button>
+        </section>
+
+        <ul id="lista-tarefas"></ul>
+
+        <div class="resumo">
+            <span id="contador">0 tarefas restantes</span>
+            <button id="limpar-concluidas">Limpar concluídas</button>
+        </div>
+    </main>
+
+    <!-- Toda a lógica da aplicação está neste arquivo -->
+    <script src="../javascript/script.js"></script>
+</body>
+</html>

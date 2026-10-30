@@ -1,0 +1,211 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GERAL */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7f3ee;
+    color: #2d1b12;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    background: linear-gradient(135deg, #3b2416, #5c3a24);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cabecalho h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.cabecalho p {
+    max-width: 900px;
+    margin: auto;
+    opacity: 0.9;
+}
+
+/* MENU */
+.menu {
+    background: #24160f;
+    padding: 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #d9a066;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(
+        rgba(59, 36, 22, 0.7),
+        rgba(59, 36, 22, 0.7)
+    ),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200")
+    center/cover;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* BOTÃO */
+.botao {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 30px;
+    background: #c88a4a;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #a96c30;
+    transform: translateY(-3px);
+}
+
+/* IMAGEM */
+.imagem-cafe {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.imagem-cafe img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* SEÇÕES */
+.sobre,
+.produtos,
+.contato,
+.citacao {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.sobre h2,
+.produtos h2,
+.contato h2,
+.citacao h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #3b2416;
+    font-size: 2.2rem;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #8b5e3c;
+    margin-bottom: 10px;
+}
+
+.card strong {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: #3b2416;
+}
+
+/* CITAÇÃO */
+blockquote {
+    text-align: center;
+    font-size: 2rem;
+    font-style: italic;
+    color: #8b5e3c;
+}
+
+/* CONTATO */
+.contato {
+    text-align: center;
+}
+
+.contato a {
+    color: #8b5e3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contato a:hover {
+    color: #c88a4a;
+}
+
+/* RODAPÉ */
+.rodape {
+    background: #24160f;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .cabecalho h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

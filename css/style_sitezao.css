@@ -1,3 +1,23 @@
+/* ==========================================================
+   Paleta
+   ========================================================== */
+:root {
+    --marrom: #3d170d;
+    --vinho: #922211;
+    --laranja: #d74d2e;
+    --bege: #c8b6a1;
+    --cinza: #8f8477;
+    --creme: #f4eee7;
+    /* bege bem clarinho, só para o fundo da página */
+    --estrela: #ffc83d;
+    /* dourado da nota */
+    --spotify: #1DB954;
+    --spotify-hover: #1ed760;
+}
+
+/* ==========================================================
+   Base
+   ========================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,28 +26,111 @@
 
 body {
     font-family: "Fira Code", monospace;
-    background: #f5f4f8;
+    background: var(--bege);
+
+    /* rodapé sempre colado no fim da tela */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Banner superior */
+/* ==========================================================
+Cabeçalho
+   ========================================================== */
 .cabecalho {
-    background: #3a0f6e;
-    color: white;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(215, 77, 46, .35), transparent 45%),
+        linear-gradient(160deg, var(--vinho), var(--marrom));
+    color: var(--creme);
     text-align: center;
-    padding: 50px 20px;
+    padding: 70px 20px 55px;
+
+    margin: 16px 16px 0;
+    border-radius: 32px;
+    box-shadow: 0 10px 30px rgba(61, 23, 13, .35);
+}
+
+/* Celular: margem e arredondamento um pouco menores */
+@media (max-width: 520px) {
+    .cabecalho {
+        margin: 10px 10px 0;
+        border-radius: 24px;
+    }
+}
+
+
+.cabecalho-selo {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 6px 16px;
+
+    font-size: .8rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--spotify-hover);
+
+    border: 1px solid var(30, 215, 96, .5);
+    border-radius: 999px;
+    background: rgba(30, 215, 96, .08);
 }
 
 .cabecalho h1 {
-    font-size: clamp(2rem, 6vw, 3rem);
-    margin-bottom: 15px;
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+    margin-bottom: 16px;
+    color: var(--creme);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, .35);
 }
 
 .cabecalho p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: var(--bege);
 }
 
-/* Grade dos álbuns e músicas */
+.cabecalho-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.cabecalho-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 130px;
+    padding: 12px 22px;
+
+    background: rgba(30, 215, 96, .08);
+    border: 1px solid rgba(30, 215, 96, .5);
+    border-radius: 16px;
+}
+
+.cabecalho-stats strong {
+    font-size: 1.7rem;
+    color: var(--spotify-hover);
+}
+
+.cabecalho-stats span {
+    font-size: .75rem;
+    color: var(--spotify-hover);
+    opacity: .85;
+}
+
+/* ==========================================================
+   Galeria
+   ========================================================== */
 .galeria {
+    flex: 1;
+    width: 100%;
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
@@ -35,31 +138,36 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
     gap: 25px;
-    align-items: stretch;   /* cards lado a lado ficam com a altura do maior */
+    align-items: stretch;
+    /* cards lado a lado ficam com a altura do maior */
 }
 
 /* Celular: uma coluna */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
     .galeria {
         grid-template-columns: 1fr;
     }
 }
 
-/* Card */
+/* ==========================================================
+   Card
+   ========================================================== */
 .musica {
     position: relative;
     overflow: hidden;
     isolation: isolate;
 
-    background: #3a0f6e;   /* reserva se a imagem não carregar */
+    background: var(--marrom);
+    /* reserva se a imagem não carregar */
     border-radius: 25px;
     padding: 14px;
 
     display: flex;
-    align-items: flex-start;   /* capa e texto sobem para o topo do card */
+    align-items: flex-start;
+    /* capa e texto sobem para o topo do card */
     gap: 18px;
 
-    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
     transition: transform .25s ease, box-shadow .25s ease;
 }
 
@@ -76,7 +184,7 @@ body {
 
 .musica:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,.25);
+    box-shadow: 0 12px 25px rgba(61, 23, 13, .35);
 }
 
 /* Coluna da capa: imagem + link do Spotify */
@@ -93,7 +201,7 @@ body {
     height: 130px;
     object-fit: cover;
     border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(0,0,0,.4);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .4);
 }
 
 .spotify {
@@ -101,7 +209,7 @@ body {
     align-items: center;
     gap: 6px;
     margin-top: 12px;
-    color: #fff;
+    color: var(--creme);
     text-decoration: none;
     font-size: .9rem;
     line-height: 1.25;
@@ -113,11 +221,11 @@ body {
     width: 50px;
     height: 50px;
     flex-shrink: 0;
-    fill: #1DB954;
+    fill: var(--spotify);
 }
 
 .spotify:hover {
-    color: #1ed760;
+    color: var(--spotify-hover);
     text-decoration: underline;
 }
 
@@ -129,12 +237,93 @@ body {
 
 .info h3 {
     margin-bottom: 8px;
-    color: #fff;
+    color: var(--creme);
 }
 
 .info p {
-    color: rgba(255,255,255,.85);
+    color: rgba(255, 255, 255, .85);
     margin-bottom: 6px;
     font-size: .85rem;
     line-height: 1.5;
+}
+
+/* Nota com estrela */
+.nota {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.estrela {
+    width: 18px;
+    height: 18px;
+    color: var(--estrela);
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 4px rgba(255, 200, 61, .45));
+}
+
+/* ==========================================================
+   Rodapé
+   ========================================================== */
+.rodape {
+    background: var(--marrom);
+    color: var(--bege);
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-top: 40px;
+}
+
+.rodape-conteudo {
+    max-width: 1200px;
+    /* mesma largura da galeria */
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.rodape-titulo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--creme);
+}
+
+.rodape-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 24px;
+}
+
+.rodape-links a {
+    color: var(--creme);
+    text-decoration: none;
+    font-size: .9rem;
+    transition: color .2s ease;
+}
+
+.rodape-links a:hover {
+    color: var(--laranja);
+    text-decoration: underline;
+}
+
+.rodape-aviso,
+.rodape-credito {
+    font-size: .8rem;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+.rodape-aviso {
+    opacity: .7;
+}
+
+/* linha fina separando o crédito do resto */
+.rodape-credito {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid rgba(143, 132, 119, .45);
 }

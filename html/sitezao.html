@@ -17,12 +17,33 @@
 
 <body>
 
-    <header class="cabecalho">
-        <h1>Músicas E Álbuns Fenomenais da Minha Playlist</h1>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="icone-estrela" viewBox="0 0 24 24">
+            <path d="M12 2.5 L14.9 8.6 L21.5 9.5 L16.7 14.1 L17.9 20.7 L12 17.5 L6.1 20.7 L7.3 14.1 L2.5 9.5 L9.1 8.6 Z"
+                fill="currentColor" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"
+                stroke-linecap="round" />
+        </symbol>
+    </svg>
+
+    <header class="cabecalho" id="topo">
+        <span class="cabecalho-selo">♪ da minha playlist</span>
+
+        <h1>Músicas e Álbuns Fenomenais</h1>
 
         <p>
             Esta é a minha playlist de músicas e álbuns fenomenais que eu adoro ouvir!
         </p>
+
+        <div class="cabecalho-stats">
+            <div>
+                <strong id="total-itens">0</strong>
+                <span>álbuns e músicas</span>
+            </div>
+            <div>
+                <strong id="total-artistas">0</strong>
+                <span>artistas</span>
+            </div>
+        </div>
     </header>
 
     <main class="galeria">
@@ -53,6 +74,12 @@
                     Um álbum um pouco menos psicodélico que o Currents e mais voltado para o pop e eletrônico, mas ainda
                     mantendo toda a identidade sonora do Tame Impala. A música One More Hour, Posthumous Forgiveness e
                     Is It True são muito dignas de serem ouvidas.
+                </p>
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
                 </p>
             </div>
         </div>
@@ -85,6 +112,12 @@
                     álbum que definitivamente popularizou o Tame Impala e o colocou no mapa da música mundial. Um dos
                     meus álbuns favoritos de todos os tempos.
                 </p>
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
             </div>
         </div>
 
@@ -115,6 +148,12 @@
                     um padrão altíssimo de qualidade para a banda. Submarine traz melancolia, superação e muita
                     tristeza. Foi inspirado nos sentimentos de Maria Zardoya e Josh Conway após o término de um
                     relacionamento. É um álbum que definitivamente vale a pena ouvir.
+                </p>
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
                 </p>
             </div>
         </div>
@@ -147,6 +186,12 @@
                     contando com Kevin Parker, Frank Dukes, Mike Dean e outros produtores de renome. É um álbum que vale
                     muito a pena ouvir. Minhas favoritas são Astrothunder, Houstonfornication e Can't Say.
                 </p>
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
             </div>
         </div>
 
@@ -177,6 +222,12 @@
                     álbum que mistura jazz, pop e psicodelia de forma brilhante. Todas as músicas do volume 2 são
                     pessoalmente perfeitas e as do volume 1 são muito boas também.
                 </p>
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
             </div>
         </div>
 
@@ -203,18 +254,27 @@
 
                 <p>
                     <strong>Minha review:</strong>
-                    Eu considero essa álbum como um dos maiores influenciadores de indie e rock moderno da década de 2010. A influência desses caras foi surreal.
-                    Comparando com os álbuns mais recentes, AM segue uma vibe 
+                    Eu considero essa álbum como um dos maiores influenciadores de indie e rock moderno da década de
+                    2010. A influência desses caras foi surreal.
+                    Comparando com os álbuns mais recentes, AM segue uma vibe "rebelde", "descolada" e divertida.
                 </p>
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+
             </div>
         </div>
 
         <div class="musica">
             <div class="capa">
-                <img src="../images/currents.jpg" alt="Eventually">
+                <img src="../images/TBHC.jpg" alt="Tranquility Base Hotel & Casino">
 
-                <a class="spotify" href="https://open.spotify.com/search/Tame%20Impala%20Eventually" target="_blank"
-                    rel="noopener noreferrer">
+                <a class="spotify"
+                    href="https://open.spotify.com/search/Arctic%20Monkeys%20Tranquility%20Base%20Hotel%20&%20Casino"
+                    target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path
                             d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
@@ -224,15 +284,29 @@
             </div>
 
             <div class="info">
-                <h3>Eventually</h3>
+                <h3>Tranquility Base Hotel & Casino</h3>
 
-                <p><strong>Artista:</strong> Tame Impala</p>
+                <p><strong>Artista:</strong> Arctic Monkeys</p>
 
-                <p><strong>Ano de Lançamento:</strong> 2015</p>
+                <p><strong>Ano de Lançamento:</strong> 2018</p>
 
                 <p>
                     <strong>Minha review:</strong>
-                    Uma das músicas mais tristes do Currents. A letra e a melodia trabalham juntas de forma brilhante.
+                    Não é novidade que a banda goste de mudar de direção a cada álbum, mas, desta vez, a reinvenção foi
+                    especialmente radical.
+                    O disco aposta em uma sonoridade muito mais experimental, explorando influências de lounge, jazz e
+                    space rock. Para os fãs mais ávidos de *AM* e do rock moderno que consagrou a banda, essa mudança
+                    pode ter sido uma grande desilusão. Para mim, porém, foi uma agradável surpresa.
+                    O álbum é repleto de referências ao cinema, à literatura e a diversas outras formas de arte,
+                    construindo uma identidade própria e bastante singular. Vale a pena ouvi-lo, especialmente se você
+                    já sente que o som de *AM* e do rock moderno ficou repetitivo — ou, como diria, se a fórmula já
+                    grudou demais nos seus ouvidos.
+                </p>
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
                 </p>
             </div>
         </div>
@@ -263,6 +337,13 @@
                     <strong>Minha review:</strong>
                     O maior clássico do Tame Impala. Baixo lendário e um dos refrões mais marcantes da década.
                 </p>
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+
             </div>
         </div>
 
@@ -293,16 +374,53 @@
                     Atmosférica. Minha favorita do Currents. Longa, experimental e extremamente bem produzida. Uma
                     verdadeira obra-prima.
                 </p>
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
             </div>
         </div>
 
     </main>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p class="rodape-titulo">Músicas e Álbuns Fenomenais</p>
+
+            <nav class="rodape-links" aria-label="Links do rodapé">
+                <a href="#topo">↑ Voltar ao topo</a>
+                <a href="../index.html">Página inicial</a>
+                <a href="https://github.com/vinioliveeira27" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </nav>
+
+            <p class="rodape-aviso">
+                Capas e músicas pertencem aos seus respectivos artistas e gravadoras.
+                Os links levam ao Spotify.
+            </p>
+
+            <p class="rodape-credito">
+                Feito por Vinicius © 2026 · HTML, CSS e JavaScript
+            </p>
+        </div>
+    </footer>
 
     <script>
         // Usa a capa de cada card como fundo desfocado
         document.querySelectorAll('.musica').forEach(card => {
             const img = card.querySelector('img');
             card.style.setProperty('--capa', `url("${img.src}")`);
+            const cards = document.querySelectorAll('.musica');
+            const artistas = new Set();
+
+            cards.forEach(card => {
+                const linha = card.querySelector('.info p');
+                artistas.add(linha.textContent.replace('Artista:', '').trim());
+            });
+
+            document.getElementById('total-itens').textContent = cards.length;
+            document.getElementById('total-artistas').textContent = artistas.size;
         });
     </script>
 

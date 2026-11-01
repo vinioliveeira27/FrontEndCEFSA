@@ -8,7 +8,7 @@
     --bege: #c8b6a1;
     --cinza: #8f8477;
     --creme: #f4eee7;
-    /* bege bem clarinho, só para o fundo da página */
+    /* bege bem clarinho, usado nos textos claros */
     --estrela: #ffc83d;
     /* dourado da nota */
     --spotify: #1DB954;
@@ -24,6 +24,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Fira Code", monospace;
     background: var(--bege);
@@ -35,11 +39,13 @@ body {
 }
 
 /* ==========================================================
-Cabeçalho
+   Cabeçalho
    ========================================================== */
 .cabecalho {
     position: relative;
     overflow: hidden;
+    isolation: isolate;
+    /* mantém o fundo animado atrás do texto */
 
     background:
         radial-gradient(circle at 15% 20%, rgba(215, 77, 46, .35), transparent 45%),
@@ -51,6 +57,9 @@ Cabeçalho
     margin: 16px 16px 0;
     border-radius: 32px;
     box-shadow: 0 10px 30px rgba(61, 23, 13, .35);
+
+    text-shadow: 0 1px 8px rgba(61, 23, 13, .7);
+    /* ajuda a ler o texto sobre as cores */
 }
 
 /* Celular: margem e arredondamento um pouco menores */
@@ -60,7 +69,6 @@ Cabeçalho
         border-radius: 24px;
     }
 }
-
 
 .cabecalho-selo {
     display: inline-block;
@@ -72,7 +80,7 @@ Cabeçalho
     text-transform: uppercase;
     color: var(--spotify-hover);
 
-    border: 1px solid var(30, 215, 96, .5);
+    border: 1px solid rgba(30, 215, 96, .5);
     border-radius: 999px;
     background: rgba(30, 215, 96, .08);
 }
@@ -136,17 +144,10 @@ Cabeçalho
     padding: 20px;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
     gap: 25px;
     align-items: stretch;
     /* cards lado a lado ficam com a altura do maior */
-}
-
-/* Celular: uma coluna */
-@media (max-width: 520px) {
-    .galeria {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* ==========================================================
@@ -247,6 +248,54 @@ Cabeçalho
     line-height: 1.5;
 }
 
+/* Etiquetas de gênero */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.tags span {
+    padding: 3px 10px;
+    font-size: .7rem;
+    color: var(--bege);
+    background: rgba(215, 77, 46, .25);
+    border: 1px solid rgba(215, 77, 46, .6);
+    border-radius: 999px;
+}
+
+/* Review cortada em 4 linhas, com "Ler mais" */
+.review {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+}
+
+.review.aberta {
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    overflow: visible;
+}
+
+.ler-mais {
+    margin: 2px 0 8px;
+    padding: 0;
+    font: inherit;
+    font-size: .8rem;
+    color: var(--laranja);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.ler-mais:hover {
+    text-decoration: underline;
+}
+
 /* Nota com estrela */
 .nota {
     display: flex;
@@ -263,14 +312,83 @@ Cabeçalho
 }
 
 /* ==========================================================
+   Botão flutuante de voltar ao topo
+   ========================================================== */
+.topo-flutuante {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.4rem;
+    color: var(--creme);
+    text-decoration: none;
+    background: var(--laranja);
+    border-radius: 50%;
+    box-shadow: 0 6px 16px rgba(61, 23, 13, .4);
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity .25s ease, transform .25s ease, background .2s ease;
+}
+
+.topo-flutuante.visivel {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+}
+
+.topo-flutuante:hover {
+    background: var(--vinho);
+}
+
+/* ==========================================================
    Rodapé
    ========================================================== */
 .rodape {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    /* mantém o fundo animado atrás do texto */
+
     background: var(--marrom);
     color: var(--bege);
     text-align: center;
-    padding: 40px 20px 30px;
-    margin-top: 40px;
+    padding: 60px 20px 40px;
+
+    margin: 40px 16px 16px;
+    border-radius: 32px;
+}
+
+@media (max-width: 520px) {
+    .rodape {
+        margin: 30px 10px 10px;
+        border-radius: 24px;
+    }
+}
+
+/* Fundo animado (desenhado pelo JavaScript).
+   É 40px maior que o rodapé para o borrão não escurecer as bordas. */
+.fluido {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: calc(100% + 80px);
+    height: calc(100% + 80px);
+    z-index: -1;
+    pointer-events: none;
+
+    filter: blur(12px);
+    /* é o que mistura as cores: menos = bordas mais definidas */
+    opacity: .65;
+    /* mais baixo = mais escuro e mais fácil de ler o texto */
 }
 
 .rodape-conteudo {
@@ -282,6 +400,9 @@ Cabeçalho
     flex-direction: column;
     align-items: center;
     gap: 16px;
+
+    text-shadow: 0 1px 8px rgba(61, 23, 13, .7);
+    /* ajuda a ler o texto sobre as cores */
 }
 
 .rodape-titulo {
@@ -314,10 +435,11 @@ Cabeçalho
     font-size: .8rem;
     line-height: 1.5;
     max-width: 600px;
+    color: var(--creme);
 }
 
 .rodape-aviso {
-    opacity: .7;
+    opacity: .8;
 }
 
 /* linha fina separando o crédito do resto */
@@ -325,5 +447,5 @@ Cabeçalho
     width: 100%;
     max-width: 100%;
     padding-top: 16px;
-    border-top: 1px solid rgba(143, 132, 119, .45);
+    border-top: 1px solid rgba(200, 182, 161, .35);
 }

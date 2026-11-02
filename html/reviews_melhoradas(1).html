@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#c8b6a1">
+    <title>Músicas E Álbuns Fenomenais da Minha Playlist</title>
+
+    <link rel="stylesheet" href="../css/style_sitezao.css">
+    <script src="../javascript/tema-e-entrada.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Ícones definidos uma única vez e reutilizados com <use> -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="icone-estrela" viewBox="0 0 24 24">
+            <path d="M12 2.5 L14.9 8.6 L21.5 9.5 L16.7 14.1 L17.9 20.7 L12 17.5 L6.1 20.7 L7.3 14.1 L2.5 9.5 L9.1 8.6 Z"
+                fill="currentColor" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"
+                stroke-linecap="round" />
+        </symbol>
+
+        <symbol id="icone-spotify" viewBox="0 0 24 24">
+            <path
+                d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+        </symbol>
+    </svg>
+
+    <header class="cabecalho" id="topo">
+        <!-- Fundo animado do cabeçalho. data-cores = camada principal, data-cores2 = camada que mistura -->
+        <canvas class="fluido" aria-hidden="true" data-cores="#922211,#d74d2e,#3d170d,#8f8477"
+            data-cores2="#3d170d,#d74d2e,#922211"></canvas>
+
+        <span class="cabecalho-selo">Reviews do Vinicião</span>
+
+        <h1>Reviews do Vinicião</h1>
+
+        <p>
+            Esta é a minha playlist de músicas e álbuns fenomenais que eu adoro ouvir!
+        </p>
+
+        <div class="cabecalho-stats">
+            <div>
+                <strong id="total-itens">0</strong>
+                <span>álbuns e músicas</span>
+            </div>
+            <div>
+                <strong id="total-artistas">0</strong>
+                <span>artistas</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="galeria">
+
+        <!-- The Slow Rush -->
+        <div class="musica">
+            <div class="capa">
+                <img src="../images/slowrush.png" alt="The Slow Rush" width="130" height="130" decoding="async">
+
+                <a class="spotify" href="https://open.spotify.com/search/Tame%20Impala%20The%20Slow%20Rush"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icone-spotify"></use>
+                    </svg>
+                    <span>Escute no Spotify</span>
+                </a>
+            </div>
+
+            <div class="info">
+                <h3>The Slow Rush</h3>
+
+                <div class="tags">
+                    <span>psicodelia</span>
+                    <span>synth-pop</span>
+                </div>
+
+                <p><strong>Artista:</strong> Tame Impala</p>
+
+                <p><strong>Ano de Lançamento:</strong> 2020</p>
+
+                <p class="review">
+                    <strong>Minha review:</strong>
+                    The Slow Rush não abandona a identidade psicodélica do Tame Impala, mas leva o projeto para um território mais próximo do pop, do synth-pop e da música eletrônica. Em comparação com Currents, a psicodelia aparece de forma menos evidente, enquanto a produção ganha ainda mais espaço. One More Hour, Posthumous Forgiveness e Is It True estão entre os grandes destaques — especialmente para quem gosta das faixas que crescem e revelam novas camadas ao longo da audição.
+                </p>
+
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+        <!-- Currents -->
+        <div class="musica">
+            <div class="capa">
+                <img src="../images/currents.jpg" alt="Currents" width="130" height="130" decoding="async">
+
+                <a class="spotify" href="https://open.spotify.com/search/Tame%20Impala%20Currents" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icone-spotify"></use>
+                    </svg>
+                    <span>Escute no Spotify</span>
+                </a>
+            </div>
+
+            <div class="info">
+                <h3>Currents</h3>
+
+                <div class="tags">
+                    <span>psicodelia</span>
+                    <span>synth-pop</span>
+                </div>
+
+                <p><strong>Artista:</strong> Tame Impala</p>
+
+                <p><strong>Ano de Lançamento:</strong> 2015</p>
+
+                <p class="review">
+                    <strong>Minha review:</strong>
+                    Currents marcou uma fase importante da minha adolescência e continuou presente na minha vida adulta. É um álbum que combina psicodelia, sintetizadores e uma abordagem bastante autoral, com faixas como Let It Happen, The Less I Know The Better e Eventually. Também foi um trabalho decisivo para ampliar o alcance do Tame Impala e consolidar Kevin Parker como um dos nomes mais reconhecidos da música alternativa dos anos 2010. Continua sendo um dos meus álbuns favoritos.
+                </p>
+
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+        <!-- Submarine -->
+        <div class="musica">
+            <div class="capa">
+                <img src="../images/submarine.jpg" alt="Submarine" width="130" height="130" loading="lazy"
+                    decoding="async">
+
+                <a class="spotify" href="https://open.spotify.com/search/The%20Marias%20Submarine" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icone-spotify"></use>
+                    </svg>
+                    <span>Escute no Spotify</span>
+                </a>
+            </div>
+
+            <div class="info">
+                <h3>Submarine</h3>
+
+                <div class="tags">
+                    <span>dream pop</span>
+                    <span>indie</span>
+                </div>
+
+                <p><strong>Artista:</strong> The Marias</p>
+
+                <p><strong>Ano de Lançamento:</strong> 2024</p>
+
+                <p class="review">
+                    <strong>Minha review:</strong>
+                    Submarine mantém a identidade atmosférica do The Marías, mas aposta em uma abordagem mais melancólica e introspectiva. O disco gira em torno de temas como término, saudade e amadurecimento emocional, com uma sonoridade que combina dream pop, indie pop e elementos eletrônicos. Depois de Cinema e dos dois volumes de Superclean, que já tinham estabelecido uma identidade muito própria, Submarine consegue expandir essa linguagem sem simplesmente repetir a fórmula. É um álbum que merece ser ouvido com atenção.
+                </p>
+
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+        <!-- Astroworld -->
+        <div class="musica">
+            <div class="capa">
+                <img src="../images/astroworld.jpg" alt="Astroworld" width="130" height="130" loading="lazy"
+                    decoding="async">
+
+                <a class="spotify" href="https://open.spotify.com/search/Travis%20Scott%20Astroworld" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icone-spotify"></use>
+                    </svg>
+                    <span>Escute no Spotify</span>
+                </a>
+            </div>
+
+            <div class="info">
+                <h3>Astroworld</h3>
+
+                <div class="tags">
+                    <span>hip-hop</span>
+                    <span>psicodélico</span>
+                </div>
+
+                <p><strong>Artista:</strong> Travis Scott</p>
+
+                <p><strong>Ano de Lançamento:</strong> 2018</p>
+
+                <p class="review">
+                    <strong>Minha review:</strong>
+                    Astroworld é um dos meus álbuns de hip-hop favoritos e, na minha opinião, merecia ter levado o Grammy de Melhor Álbum de Rap. A produção é um dos grandes trunfos do disco: psicodélica, expansiva e cheia de detalhes, com contribuições de nomes como Kevin Parker, Mike Dean e Frank Dukes. O resultado é um trabalho bastante imersivo, que transita entre atmosferas e estilos sem perder a unidade. Astrothunder, Houstonfornication e Can't Say estão entre minhas faixas favoritas.
+                </p>
+
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+        <!-- Superclean -->
+        <div class="musica">
+            <div class="capa">
+                <img src="../images/superclean.jpg" alt="Superclean" width="130" height="130" loading="lazy"
+                    decoding="async">
+
+                <a class="spotify" href="https://open.spotify.com/search/The%20Marias%20Superclean" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icone-spotify"></use>
+                    </svg>
+                    <span>Escute no Spotify</span>
+                </a>
+            </div>
+
+            <div class="info">
+                <h3>Superclean Vol. 1 &amp; Vol. 2</h3>
+
+                <div class="tags">
+                    <span>jazz pop</span>
+                    <span>dream pop</span>
+                </div>
+
+                <p><strong>Artista:</strong> The Marias</p>
+
+                <p><strong>Ano de Lançamento:</strong> 2017–2018</p>
+
+                <p class="review">
+                    <strong>Minha review:</strong>
+                    Superclean Vol. 1 e Vol. 2 foram meu primeiro contato com o The Marías — e bastaram para despertar meu interesse pela banda. Os dois EPs misturam pop, jazz e psicodelia de um jeito muito característico, com vocais suaves e arranjos que criam uma atmosfera própria. Tenho uma preferência especial pelo segundo volume, cujas faixas considero particularmente consistentes; o primeiro também tem ótimos momentos e ajuda a apresentar a sonoridade que a banda desenvolveria nos trabalhos seguintes.
+                </p>
+
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+        <!-- AM -->
+        <div class="musica">
+            <div class="capa">
+                <img src="../images/AM.jpg" alt="AM" width="130" height="130" loading="lazy" decoding="async">
+
+                <a class="spotify" href="https://open.spotify.com/search/Arctic%20Monkeys%20AM" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icone-spotify"></use>
+                    </svg>
+                    <span>Escute no Spotify</span>
+                </a>
+            </div>
+
+            <div class="info">
+                <h3>AM</h3>
+
+                <div class="tags">
+                    <span>indie rock</span>
+                    <span>rock</span>
+                </div>
+
+                <p><strong>Artista:</strong> Arctic Monkeys</p>
+
+                <p><strong>Ano de Lançamento:</strong> 2013</p>
+
+                <p class="review">
+                    <strong>Minha review:</strong>
+                    AM é um dos discos mais influentes do indie rock e do rock alternativo dos anos 2010. A combinação de riffs marcantes, grooves contagiantes e uma estética mais noturna ajudou a definir uma sonoridade que seria amplamente reproduzida nos anos seguintes. Comparado aos trabalhos posteriores do Arctic Monkeys, este álbum tem uma postura mais direta, confiante e descontraída — quase uma trilha sonora para uma noite que parece não ter hora para acabar. A influência que exerceu é difícil de ignorar.
+                </p>
+
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+        <!-- Tranquility Base Hotel & Casino -->
+        <div class="musica">
+            <div class="capa">
+                <img src="../images/TBHC.jpg" alt="Tranquility Base Hotel &amp; Casino" width="130" height="130"
+                    loading="lazy" decoding="async">
+
+                <a class="spotify"
+                    href="https://open.spotify.com/search/Arctic%20Monkeys%20Tranquility%20Base%20Hotel%20%26%20Casino"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icone-spotify"></use>
+                    </svg>
+                    <span>Escute no Spotify</span>
+                </a>
+            </div>
+
+            <div class="info">
+                <h3>Tranquility Base Hotel &amp; Casino</h3>
+
+                <div class="tags">
+                    <span>lounge</span>
+                    <span>space rock</span>
+                    <span>jazz</span>
+                </div>
+
+                <p><strong>Artista:</strong> Arctic Monkeys</p>
+
+                <p><strong>Ano de Lançamento:</strong> 2018</p>
+
+                <p class="review">
+                    <strong>Minha review:</strong>
+                    A mudança de direção do Arctic Monkeys não é exatamente uma novidade, mas Tranquility Base Hotel & Casino representa uma das reinvenções mais radicais da banda. Em vez de apostar no rock direto de AM, o disco explora uma sonoridade mais experimental, com elementos de lounge, jazz e space rock. Para quem esperava uma continuação do estilo que popularizou a banda, a mudança pode ter soado como uma grande ruptura. Para mim, foi uma surpresa muito positiva. O álbum constrói um universo próprio, com referências à ficção científica, ao cinema e à literatura, além de letras cheias de imagens e observações peculiares. É uma experiência que recompensa quem aceita deixar de lado as expectativas e entrar no clima do disco.
+                </p>
+
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+        <!-- The Music of RDR2 -->
+        <div class="musica">
+            <div class="capa">
+                <img src="../images/theMusicOfRDR2.jpg" alt="The Music of RDR2" width="130" height="130" loading="lazy"
+                    decoding="async">
+
+                <a class="spotify" href="https://open.spotify.com/search/The%20Music%20of%20Red%20Dead%20Redemption%202"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icone-spotify"></use>
+                    </svg>
+                    <span>Escute no Spotify</span>
+                </a>
+            </div>
+
+            <div class="info">
+                <h3>The Music of Red Dead Redemption 2: Original Score</h3>
+
+                <div class="tags">
+                    <span>soundtrack</span>
+                    <span>country</span>
+                </div>
+
+                <p><strong>Artista:</strong> Woody Jackson, Colin Stetson, Arca e outros</p>
+
+                <p><strong>Ano de Lançamento:</strong> 2019</p>
+
+                <p class="review">
+                    <strong>Minha review:</strong>
+                    Trilhas sonoras de jogos têm um espaço especial na minha playlist, e a música de Red Dead Redemption 2 é um dos melhores exemplos do quanto elas podem contribuir para a identidade de uma obra. A trilha original, composta por Woody Jackson e enriquecida pela participação de músicos como Colin Stetson e Arca, constrói uma paisagem sonora que evoca o Velho Oeste sem se limitar aos clichês do gênero. Há momentos de contemplação, tensão, urgência, tristeza e esperança, todos integrados ao mundo do jogo. É, para mim, um dos trabalhos musicais mais marcantes da Rockstar.
+                </p>
+
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+        <!-- Jinx -->
+        <div class="musica">
+            <div class="capa">
+                <img src="../images/jinx.jpg" alt="Jinx" width="130" height="130" loading="lazy" decoding="async">
+
+                <a class="spotify" href="https://open.spotify.com/search/" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icone-spotify"></use>
+                    </svg>
+                    <span>Escute no Spotify</span>
+                </a>
+            </div>
+
+            <div class="info">
+                <h3>Jinx</h3>
+
+                <div class="tags">
+                    <span>psicodelia</span>
+                    <span>experimental</span>
+                </div>
+
+                <p><strong>Artista:</strong> Crumb</p>
+
+                <p><strong>Ano de Lançamento:</strong> 2019</p>
+
+                <p class="review">
+                    <strong>Minha review:</strong>
+                    Conheci o Crumb em 2023, mas, na época, a sonoridade da banda não me conquistou. Quando voltei a ouvir Jinx em 2024, com mais atenção e outra disposição, a experiência foi bem diferente. A mistura de indie rock e psicodelia, com arranjos que parecem flutuar entre o familiar e o estranho, acabou me cativando. Fall Down e Part III são minhas faixas favoritas — daquelas que consigo ouvir repetidamente sem perder o interesse. Jinx é uma ótima porta de entrada para o universo do Crumb e merece mais reconhecimento entre os fãs de indie psicodélico.
+                </p>
+
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+        <!--Ice melt-->
+
+        <div class="musica">
+            <div class="capa">
+                <img src="../images/ice-melt.jpg" alt="Ice Melt" width="130" height="130" loading="lazy"
+                    decoding="async">
+
+                <a class="spotify" href="https://open.spotify.com/search/" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icone-spotify"></use>
+                    </svg>
+                    <span>Escute no Spotify</span>
+                </a>
+            </div>
+
+            <div class="info">
+                <h3>Ice Melt</h3>
+
+                <div class="tags">
+                    <span>psicodelia</span>
+                    <span>experimental</span>
+                </div>
+
+                <p><strong>Artista:</strong> Crumb</p>
+
+                <p><strong>Ano de Lançamento:</strong> 2021</p>
+
+                <p class="review">
+                    <strong>Minha review:</strong>
+                    Comecei a ouvir Ice Melt depois de Jinx e, em comparação, encontrei um disco com faixas mais imediatas e melodias que ficam na cabeça com mais facilidade. A sonoridade do Crumb continua presente, mas algumas músicas parecem apostar em estruturas mais acessíveis e refrões mais marcantes. BNR é minha faixa favorita; as outras também têm bons momentos, embora não tenham causado a mesma impressão ou permanecido tanto na memória. No conjunto, é um álbum que amplia a sonoridade da banda sem perder sua identidade.
+                </p>
+
+                <p class="nota">
+                    <strong>Nota:</strong> 10/10
+                    <svg class="estrela" aria-hidden="true">
+                        <use href="#icone-estrela"></use>
+                    </svg>
+                </p>
+            </div>
+
+    </main>
+
+    <footer class="rodape">
+        <!-- Fundo animado do rodapé, desenhado pelo JavaScript lá embaixo -->
+        <canvas class="fluido" aria-hidden="true" data-cores="#3d170d,#922211,#d74d2e,#c8b6a1,#8f8477"
+            data-cores2="#d74d2e,#8f8477,#922211,#c8b6a1"></canvas>
+
+        <div class="rodape-conteudo">
+            <p class="rodape-titulo">Músicas e Álbuns Fenomenais</p>
+
+            <nav class="rodape-links" aria-label="Links do rodapé">
+                <a href="#topo">↑ Voltar ao topo</a>
+                <a href="../index.html">Página inicial</a>
+                <a href="https://github.com/vinioliveeira27" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </nav>
+
+            <p class="rodape-aviso">
+                Capas e músicas pertencem aos seus respectivos artistas e gravadoras.
+                Os links levam ao Spotify.
+            </p>
+
+            <p class="rodape-credito">
+                Feito por Vinicius © 2026 · HTML, CSS e JavaScript
+            </p>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante de voltar ao topo -->
+    <a href="#topo" class="topo-flutuante" aria-label="Voltar ao topo">↑</a>
+
+    <script>
+        const cards = document.querySelectorAll('.musica');
+
+        // Usa a capa de cada card como fundo desfocado
+        cards.forEach(card => {
+            const img = card.querySelector('img');
+            card.style.setProperty('--capa', `url("${img.src}")`);
+        });
+
+        // Contadores do cabeçalho
+        const artistas = new Set();
+
+        cards.forEach(card => {
+            const linha = card.querySelector('.info p');   // primeiro <p>: "Artista: ..."
+            artistas.add(linha.textContent.replace('Artista:', '').trim());
+        });
+
+        document.getElementById('total-itens').textContent = cards.length;
+        document.getElementById('total-artistas').textContent = artistas.size;
+
+        // "Ler mais" nas reviews
+        const reviews = document.querySelectorAll('.review');
+
+        reviews.forEach(review => {
+            const botao = document.createElement('button');
+            botao.type = 'button';
+            botao.className = 'ler-mais';
+            botao.textContent = 'Ler mais';
+            review.after(botao);
+
+            botao.addEventListener('click', () => {
+                const aberta = review.classList.toggle('aberta');
+                botao.textContent = aberta ? 'Ler menos' : 'Ler mais';
+            });
+        });
+
+        // Mostra o botão só nas reviews que realmente foram cortadas
+        function atualizarBotoes() {
+            reviews.forEach(review => {
+                const botao = review.nextElementSibling;
+                const cortada = review.scrollHeight > review.clientHeight + 1;
+                botao.hidden = !(cortada || review.classList.contains('aberta'));
+            });
+        }
+
+        document.fonts.ready.then(atualizarBotoes);
+        window.addEventListener('resize', atualizarBotoes);
+
+        // Botão de voltar ao topo
+        const botaoTopo = document.querySelector('.topo-flutuante');
+
+        window.addEventListener('scroll', () => {
+            botaoTopo.classList.toggle('visivel', window.scrollY > 400);
+        }, { passive: true });
+
+        // Fundo fluido: faixas de cor que andam para a direita, mudam de forma e se misturam.
+        // Cada <canvas class="fluido"> ganha o seu próprio desenho, com movimentos sorteados só para ele.
+        function iniciarFluido(canvas) {
+            const ctx = canvas.getContext('2d');
+
+            // no celular o desenho é feito em resolução menor (fica borrado mesmo, então ninguém percebe)
+            const ESCALA = window.matchMedia('(max-width: 560px)').matches ? 0.35 : 0.5;
+            const PASSOS = 18;      // pontos por curva
+            const DOIS_PI = Math.PI * 2;
+
+            const aleatorio = (min, max) => min + Math.random() * (max - min);
+            const reduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // Uma camada é um "rio" de faixas que dá a volta pela tela, andando para a direita.
+            // Duas camadas sobrepostas (a de cima meio transparente) é o que mistura as cores.
+            function criarCamada(cores, velocidade, opacidade) {
+                const n = cores.length;
+
+                return {
+                    cores,
+                    opacidade,
+                    velocidade,                                  // quanto da largura anda por segundo
+                    inicio: Math.random(),                       // posição inicial sorteada
+                    oscAmp: aleatorio(0.02, 0.04),               // a velocidade "respira": acelera e freia
+                    oscFreq: aleatorio(0.25, 0.5),
+                    oscFase: aleatorio(0, DOIS_PI),
+
+                    divisorias: cores.map((_, i) => ({
+                        base: i / n,
+                        ondas: [0, 1, 2, 3].map(() => ({
+                            amp: aleatorio(0.015, 0.06),         // quanto a curva balança
+                            freq: aleatorio(2, 8),               // quantas curvas aparecem
+                            vel: aleatorio(0.1, 0.5) * (Math.random() < 0.5 ? -1 : 1),
+                            fase: aleatorio(0, DOIS_PI),
+
+                            // variações lentas que tornam o movimento imprevisível
+                            ampVel: aleatorio(0.05, 0.2),
+                            ampFase: aleatorio(0, DOIS_PI),
+                            torcao: aleatorio(0.5, 1.8),
+                            torcaoVel: aleatorio(0.05, 0.25),
+                            torcaoFase: aleatorio(0, DOIS_PI)
+                        }))
+                    }))
+                };
+            }
+
+            // Cores de cada camada, da esquerda para a direita (dão a volta e se repetem).
+            // Vêm do data-cores / data-cores2 do <canvas>; sem eles, usa estas.
+            const lerCores = (texto, padrao) => texto ? texto.split(',').map(c => c.trim()) : padrao;
+
+            const camadas = [
+                criarCamada(lerCores(canvas.dataset.cores,
+                    ['#3d170d', '#922211', '#d74d2e', '#c8b6a1', '#8f8477']), 0.022, 1),
+                criarCamada(lerCores(canvas.dataset.cores2,
+                    ['#d74d2e', '#8f8477', '#922211', '#c8b6a1']), 0.014, 0.5)
+            ];
+
+            let w = 0, h = 0;
+
+            function ajustar() {
+                w = canvas.clientWidth;
+                h = canvas.clientHeight;
+                canvas.width = Math.round(w * ESCALA);
+                canvas.height = Math.round(h * ESCALA);
+                ctx.setTransform(ESCALA, 0, 0, ESCALA, 0, 0);
+            }
+
+            // Posição horizontal (0 a 1) de uma divisória numa certa altura, num certo instante
+            function posicao(divisoria, yn, t) {
+                let x = divisoria.base;
+                divisoria.ondas.forEach(o => {
+                    const amp = o.amp * (0.65 + 0.35 * Math.sin(t * o.ampVel + o.ampFase));
+                    const torcao = o.torcao * Math.sin(t * o.torcaoVel + o.torcaoFase);
+                    x += amp * Math.sin(yn * o.freq + t * o.vel + o.fase + torcao);
+                });
+                return x;
+            }
+
+            // Desenha uma curva suave passando pelos pontos
+            function curva(pts, comecar) {
+                if (comecar) ctx.moveTo(pts[0][0], pts[0][1]);
+                else ctx.lineTo(pts[0][0], pts[0][1]);
+
+                for (let j = 1; j < pts.length - 1; j++) {
+                    const mx = (pts[j][0] + pts[j + 1][0]) / 2;
+                    const my = (pts[j][1] + pts[j + 1][1]) / 2;
+                    ctx.quadraticCurveTo(pts[j][0], pts[j][1], mx, my);
+                }
+
+                const ultimo = pts[pts.length - 1];
+                ctx.lineTo(ultimo[0], ultimo[1]);
+            }
+
+            function desenharCamada(c, t) {
+                const n = c.cores.length;
+
+                // quanto o conjunto já andou para a direita (volta ao começo a cada largura inteira)
+                const andou = c.inicio + c.velocidade * t + c.oscAmp * Math.sin(t * c.oscFreq + c.oscFase);
+                const o = ((andou % 1) + 1) % 1;
+
+                // forma de cada divisória neste instante: [x (0 a 1), y em pixels]
+                const curvas = c.divisorias.map(d => {
+                    const pts = [];
+                    for (let j = 0; j <= PASSOS; j++) {
+                        const yn = -0.1 + 1.2 * (j / PASSOS);
+                        pts.push([posicao(d, yn, t), yn * h]);
+                    }
+                    return pts;
+                });
+
+                ctx.globalAlpha = c.opacidade;
+
+                // cada faixa fica entre a divisória i e a seguinte (a última fecha a volta)
+                for (let i = 0; i < n; i++) {
+                    const esq = curvas[i];
+                    const dir = curvas[(i + 1) % n];
+                    const volta = (i + 1 === n) ? 1 : 0;
+
+                    ctx.fillStyle = c.cores[i];
+
+                    // três cópias deslocadas cobrem a tela inteira enquanto tudo dá a volta
+                    for (let k = -1; k <= 1; k++) {
+                        const s = o + k;
+                        const ptsEsq = esq.map(p => [(p[0] + s) * w, p[1]]);
+                        const ptsDir = dir.map(p => [(p[0] + volta + s) * w, p[1]]).reverse();
+
+                        ctx.beginPath();
+                        curva(ptsEsq, true);
+                        curva(ptsDir, false);
+                        ctx.closePath();
+                        ctx.fill();
+                    }
+                }
+
+                ctx.globalAlpha = 1;
+            }
+
+            function desenhar(agora) {
+                const t = agora / 1000;
+                ctx.clearRect(0, 0, w, h);
+                camadas.forEach(c => desenharCamada(c, t));
+            }
+
+            // Só anima enquanto o canvas está na tela (economiza bateria)
+            let visivel = true;
+            let rodando = false;
+
+            function loop(agora) {
+                desenhar(agora);
+                if (visivel && !reduzido) {
+                    requestAnimationFrame(loop);
+                } else {
+                    rodando = false;
+                }
+            }
+
+            function iniciar() {
+                if (!rodando) {
+                    rodando = true;
+                    requestAnimationFrame(loop);
+                }
+            }
+
+            new IntersectionObserver(([entrada]) => {
+                visivel = entrada.isIntersecting;
+                if (visivel) iniciar();
+            }).observe(canvas);
+
+            new ResizeObserver(() => {
+                ajustar();
+                desenhar(performance.now());
+            }).observe(canvas);
+        }
+
+        // Liga o efeito em cada <canvas class="fluido"> (cabeçalho e rodapé)
+        document.querySelectorAll('.fluido').forEach(iniciarFluido);
+    </script>
+    <script src="../javascript/nevoa-cards.js"></script>
+</body>
+
+</html>

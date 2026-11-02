@@ -34,7 +34,7 @@ html {
 
 body {
     font-family: "Fira Code", monospace;
-    background: var(--);
+    background: var(--marrom);
     color: var(--marrom);
 
     /* rodapé sempre colado no fim da tela */

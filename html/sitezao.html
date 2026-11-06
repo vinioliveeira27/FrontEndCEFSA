@@ -95,7 +95,7 @@
                 </p>
 
                 <p class="nota">
-                    <strong>Nota:</strong> 10/10
+                    <strong>Nota:</strong> 8/10
                     <svg class="estrela" aria-hidden="true">
                         <use href="#icone-estrela"></use>
                     </svg>
@@ -190,6 +190,7 @@
                         <use href="#icone-estrela"></use>
                     </svg>
                 </p>
+
             </div>
         </div>
 
@@ -276,11 +277,15 @@
                 </p>
 
                 <p class="nota">
-                    <strong>Nota:</strong> 10/10
+                    <strong>Nota:</strong> 8/10
                     <svg class="estrela" aria-hidden="true">
                         <use href="#icone-estrela"></use>
                     </svg>
                 </p>
+                <button class="tocar-trecho" data-uri="spotify:track:0hxl37ZV9GgcY1Pn8UiPWK" data-inicio="45"
+                    data-duracao="15">
+                    ▶ Ouvir trecho
+                </button>
             </div>
         </div>
 
@@ -320,7 +325,7 @@
                 </p>
 
                 <p class="nota">
-                    <strong>Nota:</strong> 10/10
+                    <strong>Nota:</strong> 8/10
                     <svg class="estrela" aria-hidden="true">
                         <use href="#icone-estrela"></use>
                     </svg>
@@ -359,18 +364,20 @@
 
                 <p class="review">
                     <strong>Minha review:</strong>
-                    A mudança de direção do Arctic Monkeys não é exatamente uma novidade, mas Tranquility Base Hotel &
-                    Casino representa uma das reinvenções mais radicais da banda. Em vez de apostar no rock direto de
-                    AM, o disco explora uma sonoridade mais experimental, com elementos de lounge, jazz e space rock.
-                    Para quem esperava uma continuação do estilo que popularizou a banda, a mudança pode ter soado como
-                    uma grande ruptura. Para mim, foi uma surpresa muito positiva. O álbum constrói um universo próprio,
-                    com referências à ficção científica, ao cinema e à literatura, além de letras cheias de imagens e
-                    observações peculiares. É uma experiência que recompensa quem aceita deixar de lado as expectativas
-                    e entrar no clima do disco.
+                    Essa é sem sombra de dúvidas a obra mais experimental e inventiva de Arctic Monkeys.
+                    O som é mais lento, com arranjos de piano e sintetizadores, e a banda explora elementos de lounge,
+                    space rock e jazz
+                    e por incrível que pareça, as letras são ainda mais criativas e desafiadoras para antigos ouvintes
+                    de AM.
+                    Ao ouvir o álbum pela primeira vez em 2018 eu fiquei completamente surpreso por experenciar a
+                    diferença de estilo gritante
+                    entre AM e TBHC, mas ouvi com mais cuidado e percebi que a obra trata de temas como a fama, a
+                    tecnologia e a alienação como se um sociólogo e grande pensador/observador da sociedade tivesse
+                    escrito as letras.
                 </p>
 
                 <p class="nota">
-                    <strong>Nota:</strong> 10/10
+                    <strong>Nota:</strong> 8/10
                     <svg class="estrela" aria-hidden="true">
                         <use href="#icone-estrela"></use>
                     </svg>
@@ -416,7 +423,7 @@
                 </p>
 
                 <p class="nota">
-                    <strong>Nota:</strong> 10/10
+                    <strong>Nota:</strong> 7/10
                     <svg class="estrela" aria-hidden="true">
                         <use href="#icone-estrela"></use>
                     </svg>
@@ -460,7 +467,7 @@
                 </p>
 
                 <p class="nota">
-                    <strong>Nota:</strong> 10/10
+                    <strong>Nota:</strong> 7/10
                     <svg class="estrela" aria-hidden="true">
                         <use href="#icone-estrela"></use>
                     </svg>
@@ -472,7 +479,7 @@
 
         <div class="musica">
             <div class="capa">
-                <img src="../images/ice-melt.jpg" alt="Ice Melt" width="130" height="130" loading="lazy"
+                <img src="../images/iceMelt.jpg" alt="Ice Melt" width="130" height="130" loading="lazy"
                     decoding="async">
 
                 <a class="spotify" href="https://open.spotify.com/search/" target="_blank" rel="noopener noreferrer">
@@ -506,14 +513,21 @@
                 </p>
 
                 <p class="nota">
-                    <strong>Nota:</strong> 10/10
+                    <strong>Nota:</strong> 8/10
                     <svg class="estrela" aria-hidden="true">
                         <use href="#icone-estrela"></use>
                     </svg>
                 </p>
+                <button class="tocar-trecho" data-uri="spotify:track:0hxl37ZV9GgcY1Pn8UiPWK" data-inicio="45"
+                    data-duracao="15">
+                    ▶ Ouvir trecho
+                </button>
             </div>
+        </div>
 
     </main>
+
+    <div id="player-spotify"></div>
 
     <footer class="rodape">
         <!-- Fundo animado do rodapé, desenhado pelo JavaScript lá embaixo -->
@@ -776,6 +790,10 @@
         document.querySelectorAll('.fluido').forEach(iniciarFluido);
     </script>
     <script src="../javascript/nevoa-cards.js"></script>
+    <script src="../javascript/botaoMusica.js"></script>
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+
+    </script>
 </body>
 
 </html>

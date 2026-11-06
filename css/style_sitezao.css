@@ -7,12 +7,16 @@
     --laranja: #d74d2e;
     --bege: #c8b6a1;
     --cinza: #8f8477;
-    --creme: #f4eee7;          /* bege bem clarinho, usado nos textos claros */
+    --creme: #f4eee7;
+    /* bege bem clarinho, usado nos textos claros */
 
-    --destaque: #1ed760;       /* selo e números do cabeçalho (verde do Spotify). Para tirar o verde: var(--bege) */
+    --destaque: #1ed760;
+    /* selo e números do cabeçalho (verde do Spotify). Para tirar o verde: var(--bege) */
 
-    --estrela: #ffc83d;        /* dourado da nota */
-    --spotify: #1DB954;        /* cor da marca: ícone do Spotify */
+    --estrela: #ffc83d;
+    /* dourado da nota */
+    --spotify: #1DB954;
+    /* cor da marca: ícone do Spotify */
     --spotify-hover: #1ed760;
 }
 
@@ -23,12 +27,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;   /* tira o clarão cinza ao tocar no celular */
+    -webkit-tap-highlight-color: transparent;
+    /* tira o clarão cinza ao tocar no celular */
 }
 
 html {
     scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;             /* o iPhone não aumenta a letra sozinho ao girar a tela */
+    -webkit-text-size-adjust: 100%;
+    /* o iPhone não aumenta a letra sozinho ao girar a tela */
     text-size-adjust: 100%;
 }
 
@@ -39,7 +45,8 @@ body {
 
     /* rodapé sempre colado no fim da tela */
     min-height: 100vh;
-    min-height: 100dvh;          /* dvh respeita a barra do navegador no celular */
+    min-height: 100dvh;
+    /* dvh respeita a barra do navegador no celular */
     display: flex;
     flex-direction: column;
 
@@ -54,7 +61,8 @@ body {
 .cabecalho {
     position: relative;
     overflow: hidden;
-    isolation: isolate;          /* mantém o fundo animado atrás do texto */
+    isolation: isolate;
+    /* mantém o fundo animado atrás do texto */
 
     background:
         radial-gradient(circle at 15% 20%, rgba(215, 77, 46, .35), transparent 45%),
@@ -67,7 +75,8 @@ body {
     border-radius: 32px;
     box-shadow: 0 10px 30px rgba(61, 23, 13, .35);
 
-    text-shadow: 0 1px 8px rgba(61, 23, 13, .7);   /* ajuda a ler o texto sobre as cores */
+    text-shadow: 0 1px 8px rgba(61, 23, 13, .7);
+    /* ajuda a ler o texto sobre as cores */
 }
 
 .cabecalho-selo {
@@ -148,7 +157,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
     gap: 25px;
-    align-items: stretch;   /* cards lado a lado ficam com a altura do maior */
+    align-items: stretch;
+    /* cards lado a lado ficam com a altura do maior */
 }
 
 /* ==========================================================
@@ -159,12 +169,14 @@ body {
     overflow: hidden;
     isolation: isolate;
 
-    background: var(--marrom);   /* reserva se a imagem não carregar */
+    background: var(--marrom);
+    /* reserva se a imagem não carregar */
     border-radius: 25px;
     padding: 14px;
 
     display: flex;
-    align-items: flex-start;   /* capa e texto sobem para o topo do card */
+    align-items: flex-start;
+    /* capa e texto sobem para o topo do card */
     gap: 18px;
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
@@ -286,7 +298,8 @@ body {
 
 .ler-mais {
     margin: 0 0 4px;
-    padding: 12px 0;             /* área de toque confortável no celular */
+    padding: 12px 0;
+    /* área de toque confortável no celular */
     min-height: 44px;
     font: inherit;
     font-size: .8rem;
@@ -361,7 +374,8 @@ body {
 .rodape {
     position: relative;
     overflow: hidden;
-    isolation: isolate;          /* mantém o fundo animado atrás do texto */
+    isolation: isolate;
+    /* mantém o fundo animado atrás do texto */
 
     background: var(--marrom);
     color: var(--bege);
@@ -383,12 +397,15 @@ body {
     z-index: -1;
     pointer-events: none;
 
-    filter: blur(12px);          /* é o que mistura as cores: menos = bordas mais definidas */
-    opacity: .65;                /* mais baixo = mais escuro e mais fácil de ler o texto */
+    filter: blur(12px);
+    /* é o que mistura as cores: menos = bordas mais definidas */
+    opacity: .65;
+    /* mais baixo = mais escuro e mais fácil de ler o texto */
 }
 
 .rodape-conteudo {
-    max-width: 1200px;           /* mesma largura da galeria */
+    max-width: 1200px;
+    /* mesma largura da galeria */
     margin: 0 auto;
 
     display: flex;
@@ -396,7 +413,8 @@ body {
     align-items: center;
     gap: 16px;
 
-    text-shadow: 0 1px 8px rgba(61, 23, 13, .7);   /* ajuda a ler o texto sobre as cores */
+    text-shadow: 0 1px 8px rgba(61, 23, 13, .7);
+    /* ajuda a ler o texto sobre as cores */
 }
 
 .rodape-titulo {
@@ -413,7 +431,8 @@ body {
 }
 
 .rodape-links a {
-    padding: 10px 6px;           /* área de toque confortável no celular */
+    padding: 10px 6px;
+    /* área de toque confortável no celular */
     color: var(--creme);
     text-decoration: none;
     font-size: .9rem;
@@ -473,7 +492,8 @@ body {
     }
 
     .cabecalho-stats div {
-        flex: 1 1 130px;         /* os dois contadores dividem a largura */
+        flex: 1 1 130px;
+        /* os dois contadores dividem a largura */
         min-width: 0;
         padding: 10px 14px;
     }
@@ -494,7 +514,8 @@ body {
     }
 
     .musica::before {
-        filter: blur(14px) brightness(.55);   /* mais leve para o celular */
+        filter: blur(14px) brightness(.55);
+        /* mais leve para o celular */
     }
 
     .capa {
@@ -576,4 +597,12 @@ body {
     * {
         transition-duration: .01ms !important;
     }
+}
+
+#player-spotify {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
